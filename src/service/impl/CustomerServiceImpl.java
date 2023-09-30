@@ -23,6 +23,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void customerLogin() {
+        boolean loggined=false;
+
         String login2 = InputUtil.getInstance().inputString("login :");
         String password2 = InputUtil.getInstance().inputString("password :");
 
@@ -30,9 +32,11 @@ public class CustomerServiceImpl implements CustomerService {
             if (GlobalData.customers.get(i).getLogin().equals(login2)
                     && GlobalData.customers.get(i).getPassword().equals(password2)) {
                 customerMenu(GlobalData.customers.get(i));
-            } else {
-                throw new GlobalException(Exceptions.NOT_REGISTERED_EXCEPTION);
+                loggined=true;
             }
+        }
+        if (!loggined){
+            throw new GlobalException(Exceptions.NOT_REGISTERED_EXCEPTION);
         }
     }
 
