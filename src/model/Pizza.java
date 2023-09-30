@@ -9,7 +9,6 @@ public class Pizza {
     private BigDecimal mediumPrice;
     private BigDecimal largePrice;
 
-    private String sousName;
     private String size;
     private BigDecimal price;
 
@@ -23,14 +22,6 @@ public class Pizza {
 
     public String getSize() {
         return size;
-    }
-
-    public String getSousName() {
-        return sousName;
-    }
-
-    public void setSousName(String sousName) {
-        this.sousName = sousName;
     }
 
     public void setSize(String size) {

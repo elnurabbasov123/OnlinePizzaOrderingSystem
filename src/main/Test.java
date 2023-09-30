@@ -1,12 +1,15 @@
 package main;
 
+import global.GlobalData;
+import model.Customer;
+
 import java.math.BigDecimal;
 
-public class Test {
-    public static void main(String[] args) {
-        BigDecimal s=new BigDecimal(10);
-        BigDecimal s2=new BigDecimal(3);
+import static global.GlobalData.customers;
 
-        System.out.println(s.subtract(s2).doubleValue());
+public class Test {
+    public static void main(String[] args) throws ClassNotFoundException{
+
+
     }
 }
