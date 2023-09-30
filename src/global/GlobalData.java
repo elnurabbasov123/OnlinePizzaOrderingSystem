@@ -26,11 +26,12 @@ public class GlobalData {
     public static long orderId;
     public static int pizzaId;
     public static int sousId;
+    public static int adminId;
 
     static {
         admins = List.of(
-                new Admin("vidi030", "manager123", "Vidadi", "Muradov", "Manager"),
-                new Admin("2", "2", "Elvin", "Abbasov", "Direktor")
+                new Admin(++adminId,"vidi030", "manager123", "Vidadi", "Muradov", "Manager"),
+                new Admin(++adminId,"2", "2", "Elvin", "Abbasov", "Direktor")
         );
 
         pizzaList = List.of(

@@ -1,5 +1,9 @@
 package util;
 
+import global.GlobalData;
+import model.Admin;
+import model.Customer;
+
 import java.util.Scanner;
 
 public class InputUtil {
@@ -37,5 +41,22 @@ public class InputUtil {
         Scanner scanner = new Scanner(System.in);
         System.out.print(title);
         return scanner.nextDouble();
+    }
+
+    public static Object searchObjectById(Object obj,int id){
+        if (obj instanceof Customer){
+            for (int i = 0; i < GlobalData.customers.size(); i++) {
+                if (GlobalData.customers.get(i).getId()==id){
+                    return GlobalData.customers.get(i);
+                }
+            }
+        }else if(obj instanceof Admin){
+            for (int i = 0; i < GlobalData.admins.size(); i++) {
+                if (GlobalData.admins.get(i).getId()==id){
+                    return GlobalData.admins.get(i);
+                }
+            }
+        }
+        return "Not Found;";
     }
 }

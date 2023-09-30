@@ -1,6 +1,7 @@
 package model;
 
 public class Admin {
+    private int id;
     private String login;
     private String password;
     private String name;
@@ -8,12 +9,21 @@ public class Admin {
     private String post;
 
     public  Admin(){}
-    public Admin(String login, String password, String name, String surname, String post) {
+    public Admin(int id,String login, String password, String name, String surname, String post) {
+        this.id=id;
         this.login = login;
         this.password = password;
         this.name = name;
         this.surname = surname;
         this.post = post;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLogin() {
